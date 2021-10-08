@@ -1,0 +1,21 @@
+.father-body{
+    width: 90%;
+    margin:  auto;
+    height: 100vh;
+    display: flex;
+}
+
+.menu-container_body{
+    padding-top: 80px;
+    width: 18%;
+    height: 100vh;
+    position: fixed;
+}
+
+.container-father-bodu{
+    width: 80%;
+    height: auto;
+    margin: 40px 0 0 20%;
+    background-color: #F9F9F9;
+    border-radius: 10px;
+}

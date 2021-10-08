@@ -1,0 +1,11 @@
+<h4>Menu</h4>
+<hr>
+
+<ul class="menu-container">
+    <li *ngFor="let item of MenuOption"
+        class="menu"
+        routerLinkActive="menu-backgroud"
+        [routerLink]="[item.ruta]">
+        {{item.texto}}
+    </li>
+</ul>
