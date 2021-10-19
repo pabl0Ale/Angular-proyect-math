@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MatematicaRoutingModule } from './matematica-routing.module';
 import { SumaComponent } from './pages/suma/suma.component';
 import { InversaMatrizComponent } from './pages/inversa-matriz/inversa-matriz.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     MatematicaRoutingModule,
-    FormsModule
+    ReactiveFormsModule
   ]
 })
 export class MatematicaModule { }

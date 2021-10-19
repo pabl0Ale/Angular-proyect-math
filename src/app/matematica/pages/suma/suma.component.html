@@ -1,33 +1,41 @@
-<div class="container-sumaMatrices">
-    <h5 class="titulo-sumaMatrices">Suma de Matrices</h5>
-    <hr class="sumaMatrices-bar">
+ 
+<form [formGroup]="empForm" (ngSubmit)="onSubmit()">
 
-    <div class="comtainer-ingresar-datos-suma">
-        <div class="container-Tamamatrices">
-            <p class="Tamamatrices-titulo">Elija el tamalo de Matriz:</p>
-
-            <input 
-                class="input-tamañoMatrices" 
-                type="number"
-                [(ngModel)]="datoInp1">
-
-            <input 
-                class="input-tamañoMatrices" 
-                type="number"
-                [(ngModel)]="datoInp2">
-        </div>
-
-        <!--la matriz de para ingresar datos-->
-        <div class="conatiner-datos-matriz">
-            <h4>Ingrese sus datos</h4>
-            <div class="container-matrices-father">
-                <div>(
-
-                    
+  <div formArrayName="employees">
+    <div *ngFor="let employee of employees().controls; let empIndex=index">
 
 
-                    )</div>
+
+
+      <div
+        [formGroupName]="empIndex"
+        style="border: 1px solid blue; padding: 10px; width: 600px; margin: 5px;"
+      >
+ 
+        <div formArrayName="skills">
+          <div
+            *ngFor="let skill of employeeSkills( empIndex).controls; let skillIndex=index"
+          >
+            <div [formGroupName]="skillIndex">
+              {{skillIndex}} Skill :
+              <input type="text" formControlName="skill" />
             </div>
+          </div>
         </div>
+
+        <!--<button type="button" (click)="addEmployeeSkill(empIndex)">
+          Add Skill
+        </button>-->
+
+      </div>
+      
+
     </div>
-</div>
+  </div>
+
+
+</form>
+ 
+{{this.empForm.value | json}}
+ 
+<br />d<br />
