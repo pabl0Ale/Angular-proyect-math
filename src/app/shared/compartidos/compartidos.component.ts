@@ -20,22 +20,13 @@ export class CompartidosComponent implements OnInit {
   //menu para las options
   MenuOption: OptionMenu[] = [
     {
-      texto: 'Invesa de una  matriz',
-      ruta: '/matrices/InversaMatriz'
+      texto: 'Multiplicacion de matriz',
+      ruta: '/matrices/MultiplicacionMatriz'
     },
     {
       texto:"suma de matrices",
       ruta: "/matrices/sumaMatrices"
-    },
-    {
-      texto: 'Determinante de una matriz',
-      ruta: 'dfasfsd'
-    },
-    {
-      texto: 'Transpuesta de una matriz',
-      ruta: 'dfasfsd'
-    },
-
+    }
   ]
 
 }

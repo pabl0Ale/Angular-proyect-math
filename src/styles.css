@@ -13,3 +13,113 @@
     color: #6CA1D1;
     margin: 0 0 0 30px;
 }
+
+.father-container-backgroung{
+    background-color: white;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.container-datos-inputs{
+    display: flex;
+    color: #505050;
+    font-size: 13px;
+    margin-bottom: 80px;
+}
+
+.container-datos-inputs{
+    margin: 25px 0 20px 0;
+}
+
+
+.inputs-dato-tamaño{
+    width: 40px;
+    height: 25px;
+    margin-left: 10px;
+    border: none;
+    background-color: #dbdbdb8e;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.ingrese-datos-titulo{
+    color: #505050;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.contenedor-matrices{
+    display: flex;
+    align-items: center;
+}
+
+.suma-container-father{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container-all-inpits{
+    width: auto;
+}
+
+.suma-containInpits{
+    display: inline-block;
+}
+
+.suma-matrices-input{
+    display: inline-block;
+}
+
+
+.inputs-matrices{
+    background-color: #E7E6E7;
+    width:45px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    margin: 0 5px 5px 0;
+    text-align: center;
+}
+
+
+.btn-resolver-matriz{
+    background-color: #8C8C8C;
+    margin: 20px 0 20px 0;
+    border: none;
+    width: 100px;
+    height: 35px;
+    color: white;
+    font-weight: 400;
+    font-size: 15px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+
+.icono-suma{
+    padding: 0 10px 0 10px;
+    font-size: 20px;
+}
+.container-resultado-father{
+    background-color:white;
+    margin: 0 30px 30px 30px;
+    border-radius: 10px;
+    padding: 20px;
+}
+.containerssssss{
+    display: flex;
+    align-items: center;
+}
+
+.parentesis-resultado{
+    height: auto;
+    font-size:60px ;
+    color: #696969da;
+}
+
+.resultado-contain{
+    display: flex;
+    color: #505050;
+}

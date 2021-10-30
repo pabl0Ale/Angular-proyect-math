@@ -12,7 +12,7 @@ const routes: Routes = [
         component: SumaComponent
       },
       {
-        path:'InversaMatriz',
+        path:'MultiplicacionMatriz',
         component:InversaMatrizComponent
       },
       {

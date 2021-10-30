@@ -1,3 +1,113 @@
-<h2 class="titulo-paginas-matrices">Inversa de una matriz</h2>
+<h2 class="titulo-paginas-matrices">Multiplicacion de matrices</h2>
 <hr>
 
+<div class="father-container-backgroung">
+
+    <Form  [formGroup]="matrices"  (ngSubmit)="resolverMatrix()" >
+
+
+        
+        <!--primera matriz-->
+        <div class="container-datos-inputs">
+            <label for="inselect">Seleciona la dimension</label>
+            <select id="inselect" formControlName="Ma1dato1"  (change)="crearMatriz()" class="inputs-dato-tamaño" >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <select id="inselect" formControlName="Ma1dato2"  (change)="crearMatriz()" class="inputs-dato-tamaño">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <p class="ingrese-datos-titulo" >Ingrese datos  de la matriz</p>
+        <div class="contenedor-matrices">
+            <div formArrayName="matriz1" class="suma-container-father">
+                <div class="container-all-inpits">
+                    <div *ngFor="let employee of matriz1().controls; let empIndex=index" class="suma-contain-semifather">
+                        <div [formGroupName]="empIndex" class="suma-containInpits">
+                            <div  formArrayName="skills"  class="suma-container-inputs">
+                                <div  *ngFor="let skill of employeeSkills( empIndex).controls; let skillIndex=index" class="suma-matrices-input">
+                                    <div  [formGroupName]="skillIndex" class="suma-contain-input">
+                                        <input type="number" formControlName="skill"  class="inputs-matrices"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--sugunda matriz-->
+        <div class="container-datos-inputs">
+            <label for="inselect">Seleciona la dimension</label>
+            <select id="inselect" formControlName="Ma2dato1"  (change)="crearMatriz()" class="inputs-dato-tamaño" >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <select id="inselect" formControlName="Ma2dato2"  (change)="crearMatriz()" class="inputs-dato-tamaño">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <p class="ingrese-datos-titulo" >Ingrese datos  de la matriz</p>
+        <div class="contenedor-matrices">
+            <div formArrayName="matriz2" class="suma-container-father">
+                <div class="container-all-inpits">
+                    <div *ngFor="let employee of matriz2().controls; let empIndex2=index" class="suma-contain-semifather">
+                        <div [formGroupName]="empIndex2" class="suma-containInpits">
+                            <div  formArrayName="skills"  class="suma-container-inputs">
+                                <div  *ngFor="let skill of employeeSkills2( empIndex2).controls; let skillIndex=index" class="suma-matrices-input">
+                                    <div  [formGroupName]="skillIndex" class="suma-contain-input">
+                                        <input type="number"  class="inputs-matrices" formControlName="skill"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <button  class="btn-resolver-matriz" type="submit" >Resolver</button>
+
+
+    </Form>
+
+
+</div>
+
+
+<!--mostrar resultado-->
+<div class="container-resultado-father">
+    <h3>Solucion</h3>
+    <div class="containerssssss">
+      <span class="parentesis-resultado"   >(</span>
+  
+      <div>
+        <div *ngFor="let content of arrayResolucion; let i=index" class="resultado-contain" >
+          <p *ngFor="let items of content; let o=index">{{items}}, </p>
+        </div>
+      </div>
+      
+      
+        <span class="parentesis-resultado">)</span>
+    </div>
+  
+  </div>

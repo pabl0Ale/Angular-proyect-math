@@ -3,7 +3,7 @@
 
  <div class="father-container-backgroung">
 
-  <form [formGroup]="empForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="matrices" (ngSubmit)="resolverMatrices()">
     <div class="container-datos-inputs">
       <p>Elige el tamaño de la Matriz:</p>
       <input type="number" class="inputs-dato-tamaño" formControlName="dato1">
@@ -18,9 +18,9 @@
 
 
         <!--pimeera matrix-->
-    <div formArrayName="employees" class="suma-container-father"> 
+    <div formArrayName="matriz1" class="suma-container-father"> 
       <div class="container-all-inpits">
-        <div *ngFor="let employee of employees().controls; let empIndex=index" class="suma-contain-semifather"> 
+        <div *ngFor="let employee of matriz1().controls; let empIndex=index" class="suma-contain-semifather"> 
           <div
             [formGroupName]="empIndex"
             class="suma-containInpits">
@@ -39,9 +39,9 @@
     </div>
     <span class="icono-suma">+</span>
     <!--segunda matrix-->
-    <div formArrayName="employees2" class="suma-container-father"> 
+    <div formArrayName="matriz2" class="suma-container-father"> 
       <div class="container-all-inpits">
-        <div *ngFor="let employee of employees2().controls; let empIndex=index" class="suma-contain-semifather"> 
+        <div *ngFor="let employee of matriz2().controls; let empIndex=index" class="suma-contain-semifather"> 
           <div
             [formGroupName]="empIndex"
             class="suma-containInpits">
@@ -67,7 +67,6 @@
   
   </form>
 
-  <!--{{this.empForm.value | json}}-->
  </div>
 
  <div class="container-resultado-father">
